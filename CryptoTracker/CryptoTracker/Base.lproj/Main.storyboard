@@ -439,22 +439,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="654"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn6-Ai-bXN">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="fRQ-Iy-Pgf"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News about Bitcoins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKs-Qx-udz">
-                                                <rect key="frame" x="0.0" y="50" width="375" height="151"/>
+                                                <rect key="frame" x="0.0" y="54" width="375" height="150"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News about Bitcoins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChA-jY-dnG">
-                                                <rect key="frame" x="0.0" y="201" width="375" height="151"/>
+                                                <rect key="frame" x="0.0" y="204" width="375" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="ybO-60-iCx"/>
                                                 </constraints>
@@ -463,7 +460,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News about Ether" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmO-0m-72U">
-                                                <rect key="frame" x="0.0" y="352" width="375" height="151"/>
+                                                <rect key="frame" x="0.0" y="354" width="375" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="n7X-Q2-bfM"/>
                                                 </constraints>
@@ -472,7 +469,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News about Ether" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-dq-fT2">
-                                                <rect key="frame" x="0.0" y="503" width="375" height="151"/>
+                                                <rect key="frame" x="0.0" y="504" width="375" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="jzh-1N-YBz"/>
                                                 </constraints>
