@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var portfolioView: UIView!
+    
+    @IBAction func addButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "toTransaction", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        portfolioView.layer.cornerRadius = 5
     }
 
 
