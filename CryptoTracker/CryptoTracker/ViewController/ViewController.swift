@@ -19,6 +19,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         portfolioView.layer.cornerRadius = 5
     }
+    func updateCurrencies() {
+        
+    }
 
 
 }
