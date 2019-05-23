@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					B8EE12A3228D389B00E75E02 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -307,7 +308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alex.CryptoTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -325,7 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alex.CryptoTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
