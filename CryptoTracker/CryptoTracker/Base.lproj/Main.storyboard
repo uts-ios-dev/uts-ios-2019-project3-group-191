@@ -175,7 +175,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="75" height="60.333333333333336"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ether" translatesAutoresizingMaskIntoConstraints="NO" id="Nba-c4-NwL">
-                                                                <rect key="frame" x="20" y="20" width="35" height="20.333333333334238"/>
+                                                                <rect key="frame" x="20" y="20" width="35" height="20.333333333333329"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </imageView>
                                                         </subviews>
@@ -298,7 +298,7 @@
                                                                 </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="Bg6-RZ-1EU">
-                                                                <rect key="frame" x="37.666666666666664" y="-34" width="49.999999999999993" height="128"/>
+                                                                <rect key="frame" x="37.666666666666664" y="22" width="49.999999999999993" height="16"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="D7A-DH-Iwl"/>
                                                                 </constraints>
@@ -366,7 +366,7 @@
                                                                 </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news" translatesAutoresizingMaskIntoConstraints="NO" id="hlp-g2-s2v">
-                                                                <rect key="frame" x="37.666666666666686" y="-2" width="50" height="64"/>
+                                                                <rect key="frame" x="37.666666666666686" y="22" width="50" height="16"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="hdl-LO-yRJ"/>
                                                                 </constraints>
@@ -753,6 +753,6 @@
         <image name="plus" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XSX-iD-8Fy"/>
+        <segue reference="3gN-fi-0Eo"/>
     </inferredMetricsTieBreakers>
 </document>

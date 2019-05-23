@@ -39,6 +39,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8AB2341229652250067FEF0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B8EE12A9228D389B00E75E02 /* ViewController.swift */,
+				B8AB233C22951E6C0067FEF0 /* TransactionViewController.swift */,
+				B8AB233E22952F3C0067FEF0 /* NewsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		B8EE129B228D389B00E75E02 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +68,11 @@
 		B8EE12A6228D389B00E75E02 /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				B8AB2341229652250067FEF0 /* ViewController */,
 				B8EE12A7228D389B00E75E02 /* AppDelegate.swift */,
-				B8AB233E22952F3C0067FEF0 /* NewsViewController.swift */,
-				B8EE12A9228D389B00E75E02 /* ViewController.swift */,
 				B8EE12AB228D389B00E75E02 /* Main.storyboard */,
-				B8AB233C22951E6C0067FEF0 /* TransactionViewController.swift */,
-				B8EE12AE228D389C00E75E02 /* Assets.xcassets */,
 				B8EE12B0228D389C00E75E02 /* LaunchScreen.storyboard */,
+				B8EE12AE228D389C00E75E02 /* Assets.xcassets */,
 				B8EE12B3228D389C00E75E02 /* Info.plist */,
 			);
 			path = CryptoTracker;
