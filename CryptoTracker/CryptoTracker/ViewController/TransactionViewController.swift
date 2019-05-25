@@ -13,21 +13,25 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var coinPicker: UIPickerView!
     @IBOutlet weak var saveButtonOutlet: UIButton!
     
+    @IBOutlet weak var amountText: UITextField!
+    @IBOutlet weak var quantityText: UITextField!
+    @IBOutlet weak var transactionFeeText: UITextField!
+    
+    
     @IBAction func saveButton(_ sender: UIButton) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    let coins = ["Bitcoin","Ethereum","Litecoin"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return coins.count
+        return currString.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return coins[row]
+        return currString[row]
     }
     
     override func viewDidLoad() {
