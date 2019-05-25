@@ -12,15 +12,7 @@ import CryptoCurrencyKit
 let defaults = UserDefaults.standard
 var holdings: [String: Double] = [:]
 var currencies: [String: Double] = [:]
-var currString: [String] = ["bitcoin", "ether", "litecoin"]
-
-//Prices in numeric(not text format)
-//var bcPriceNum: Double = 0
-//var bcHoldingsNum: Double = 0
-//var etherPriceNum: Double = 0
-//var etherHoldingsNum: Double = 0
-//var lcPriceNum: Double = 0
-//var litecoinHoldingsNum: Double = 0
+var currString: [String] = ["BitCoin", "Ethereum", "Litecoin"]
 
 class ViewController: UIViewController {
 
@@ -37,14 +29,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var etherValue: UILabel!
     
     @IBOutlet weak var litecoinPrice: UILabel!
-    @IBOutlet weak var liteCoinGainLoss: UILabel!
+    @IBOutlet weak var litecoinGainLoss: UILabel!
     @IBOutlet weak var litecoinHoldings: UILabel!
     @IBOutlet weak var litecoinValue: UILabel!
+
+    var labels: [String: [UILabel]] = [:]
     
     @IBOutlet weak var portfolioValue: UILabel!
     
     @IBAction func addButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toTransaction", sender: self)
+    }
+    
+    
+    @IBAction func refreshButton(_ sender: UIButton) {
+        let currenciesOld = currencies
+        updateCurrencies()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.updatePortolio()
+            self.updateGainsLosses(currenciesOld)
+        })
     }
     
     override func viewDidLoad() {
@@ -59,10 +63,17 @@ class ViewController: UIViewController {
         } else {
             setupCurrencyDic()
         }
-//        holdings["bitcoin"] = 0.1
-//        holdings["ether"] = 1.0
-//        holdings["litecoin"] = 0.0
-//        defaults.set(holdings, forKey: "holdingsKey")
+        let bitcoinLabels: [UILabel] = [bitCoinPrice, bitCoinGainLoss, bitCoinHoldings, bitCoinValue]
+        let etherLabels: [UILabel] = [etherPrice, etherGainLoss, etherHoldings, etherValue]
+        let litecoinLabels: [UILabel] = [litecoinPrice, litecoinGainLoss, litecoinHoldings, litecoinValue]
+        labels["BitCoin"] = bitcoinLabels
+        labels["Ethereum"] = etherLabels
+        labels["Litecoin"] = litecoinLabels
+//        holdings["BitCoin"] = 0.1
+//        holdings["Ethereum"] = 1.0
+//        holdings["Litecoin"] = 0.0
+        
+        defaults.set(holdings, forKey: "holdingsKey")
         let currenciesOld = currencies
         setupView()
         updateCurrencies()
@@ -79,56 +90,32 @@ class ViewController: UIViewController {
     }
     func setupCurrencyDic() {
         for c in currString {
-            print(c)
             currencies[c] = 0.0
         }
     }
     
     func setupView() {
         portfolioView.layer.cornerRadius = 5
-        
-        bitCoinPrice.text = String(format: "$%.02f", currencies["bitcoin"]!)
-        etherPrice.text = String(format: "$%.02f", currencies["ether"]!)
-        litecoinPrice.text = String(format: "$%.02f", currencies["litecoin"]!)
-        
-        bitCoinHoldings.text = String(format: "%.02f", holdings["bitcoin"]!)
-        etherHoldings.text = String(format: "%.02f", holdings["ether"]!)
-        litecoinHoldings.text = String(format: "%.02f", holdings["litecoin"]!)
+
+        for c in currString {
+            self.labels[c]![0].text = String(format: "$%.02f", currencies[c]!)
+            self.labels[c]![2].text = String(format: "%.02f", holdings[c]!)
+        }
     }
     
     func updateCurrencies() {
-        //Bitcoin
-        CryptoCurrencyKit.fetchTicker(coinName: "BitCoin", convert: .usd) { r in
-            switch r {
-            case .success(let bitCoin):
-                currencies.updateValue(bitCoin.priceUSD!, forKey:"bitcoin")
-                self.bitCoinPrice.text = String(format: "$%.02f", currencies["bitcoin"]!)
-                self.bitCoinValue.text = String(format: "$%.02f", (holdings["bitcoin"]! * currencies["bitcoin"]!))
-            case .failure(let error):
-                print(error)
+        for c in currString {
+            CryptoCurrencyKit.fetchTicker(coinName: c, convert: .usd) { r in
+                switch r {
+                case .success(let coin):
+                    currencies.updateValue(coin.priceUSD!, forKey: c)
+                    self.labels[c]![0].text = String(format: "$%.02f", currencies[c]!)
+                    self.labels[c]![3].text = String(format: "$%.02f", (holdings[c]! * currencies[c]!))
+                case .failure(let error):
+                    print(error)
+                }
             }
-        }
-        //Ether
-        CryptoCurrencyKit.fetchTicker(coinName: "Ethereum", convert: .usd) { r in
-            switch r {
-            case .success(let ether):
-                currencies.updateValue(ether.priceUSD!, forKey:"ether")
-                self.etherPrice.text = String(format: "$%.02f", currencies["ether"]!)
-                self.etherValue.text = String(format: "$%.02f", (holdings["ether"]! * currencies["ether"]!))
-            case .failure(let error):
-                print(error)
-            }
-        }
-        //Litecoin
-        CryptoCurrencyKit.fetchTicker(coinName: "Litecoin", convert: .usd) { r in
-            switch r {
-            case .success(let litecoin):
-                currencies.updateValue(litecoin.priceUSD!, forKey:"litecoin")
-                self.litecoinPrice.text = String(format: "$%.02f", currencies["litecoin"]!)
-                self.litecoinValue.text = String(format: "$%.02f", (holdings["litecoin"]! * currencies["litecoin"]!))
-            case .failure(let error):
-                print(error)
-            }
+
         }
     }
     
@@ -143,14 +130,15 @@ class ViewController: UIViewController {
     }
     
     func updateGainsLosses(_ currOld: [String:Double]) {
-        //caculating Gains/losses compared to last update
-        let bitcoinGaintemp = currOld["bitcoin"]! - currencies["bitcoin"]!
-        self.bitCoinGainLoss.text = String(format: "%.02f", (bitcoinGaintemp / currOld["bitcoin"]!) * 100.0) + "%"
-        if bitcoinGaintemp >= 0 {
-            self.bitCoinGainLoss.textColor = UIColor.green
-        }
-        else {
-            self.bitCoinGainLoss.textColor = UIColor.red
+        for c in currString {
+            let temp = currOld[c]! - currencies[c]!
+            self.labels[c]![1].text = String(format: "%.02f", (temp / currOld[c]!) * 100.0) + "%"
+            if temp >= 0 {
+                self.labels[c]![1].textColor = UIColor.green
+            }
+            else {
+                self.labels[c]![1].textColor = UIColor.red
+            }
         }
     }
 
