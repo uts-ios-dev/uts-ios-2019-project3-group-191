@@ -416,6 +416,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bitCoinGainLoss" destination="wEK-9D-988" id="F30-PZ-oWe"/>
+                        <outlet property="bitCoinHoldings" destination="3VL-lA-SrV" id="f5q-n3-vvb"/>
+                        <outlet property="bitCoinPrice" destination="lea-Xm-doV" id="s9u-H9-JKN"/>
+                        <outlet property="bitCoinValue" destination="tfj-sp-aUT" id="f34-Qa-V9D"/>
+                        <outlet property="etherGainLoss" destination="gVr-af-SDU" id="yaz-Eg-YD0"/>
+                        <outlet property="etherHoldings" destination="Ilr-Ub-gxR" id="Zrj-D8-3UV"/>
+                        <outlet property="etherPrice" destination="inV-cv-P6z" id="Vg4-9z-1sY"/>
+                        <outlet property="etherValue" destination="mcw-GJ-kdn" id="c5Y-9V-1jH"/>
+                        <outlet property="liteCoinGainLoss" destination="hFZ-Pg-3lH" id="pXR-gn-2mz"/>
+                        <outlet property="litecoinHoldings" destination="bNy-t9-wI7" id="V19-hz-Dyq"/>
+                        <outlet property="litecoinPrice" destination="yBf-Bv-Zue" id="fh4-hh-wkA"/>
+                        <outlet property="litecoinValue" destination="Pq1-MH-2tl" id="c7z-TS-nCg"/>
                         <outlet property="portfolioView" destination="NFB-nA-8a7" id="9xl-Sz-vWu"/>
                         <segue destination="EFv-5u-r7K" kind="show" identifier="toTransaction" id="3gN-fi-0Eo"/>
                     </connections>
@@ -753,6 +765,6 @@
         <image name="plus" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XSX-iD-8Fy"/>
+        <segue reference="3gN-fi-0Eo"/>
     </inferredMetricsTieBreakers>
 </document>

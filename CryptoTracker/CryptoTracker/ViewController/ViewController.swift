@@ -7,10 +7,31 @@
 //
 
 import UIKit
+import CryptoCurrencyKit
+
+//Prices in numeric(not text format)
+var bcPriceNum: Double = 0
+var etherPriceNum: Double = 0
+var lcPriceNum: Double = 0
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var portfolioView: UIView!
+    
+    @IBOutlet weak var bitCoinPrice: UILabel!
+    @IBOutlet weak var bitCoinGainLoss: UILabel!
+    @IBOutlet weak var bitCoinHoldings: UILabel!
+    @IBOutlet weak var bitCoinValue: UILabel!
+    
+    @IBOutlet weak var etherPrice: UILabel!
+    @IBOutlet weak var etherGainLoss: UILabel!
+    @IBOutlet weak var etherHoldings: UILabel!
+    @IBOutlet weak var etherValue: UILabel!
+    
+    @IBOutlet weak var litecoinPrice: UILabel!
+    @IBOutlet weak var liteCoinGainLoss: UILabel!
+    @IBOutlet weak var litecoinHoldings: UILabel!
+    @IBOutlet weak var litecoinValue: UILabel!
     
     @IBAction func addButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toTransaction", sender: self)
@@ -18,6 +39,46 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         portfolioView.layer.cornerRadius = 5
+        updateCurrencies()
+    }
+    
+    func updateCurrencies() {
+        //Bitcoin
+        CryptoCurrencyKit.fetchTicker(coinName: "BitCoin", convert: .usd) { r in
+            switch r {
+            case .success(let bitCoin):
+                bcPriceNum = bitCoin.priceUSD!
+                self.bitCoinPrice.text = String(format: "$%.02f", bcPriceNum)
+                let bcHoldingsTemp: Double = bcPriceNum * (Double(self.bitCoinHoldings.text!)!)
+                self.bitCoinValue.text = String(format: "$%.02f", bcHoldingsTemp)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        //Ether
+        CryptoCurrencyKit.fetchTicker(coinName: "Ethereum", convert: .usd) { r in
+            switch r {
+            case .success(let ether):
+                etherPriceNum = ether.priceUSD!
+                self.etherPrice.text = String(format: "$%.02f", etherPriceNum)
+                let etherHoldingsTemp: Double = bcPriceNum * (Double(self.etherHoldings.text!)!)
+                self.bitCoinValue.text = String(format: "$%.02f", etherHoldingsTemp)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        //Litecoin
+        CryptoCurrencyKit.fetchTicker(coinName: "Litecoin", convert: .usd) { r in
+            switch r {
+            case .success(let litecoin):
+                lcPriceNum = litecoin.priceUSD!
+                self.litecoinPrice.text = String(format: "$%.02f", lcPriceNum)
+                let litecoinHoldingsTemp: Double = bcPriceNum * (Double(self.litecoinHoldings.text!)!)
+                self.litecoinValue.text = String(format: "$%.02f", litecoinHoldingsTemp)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 
