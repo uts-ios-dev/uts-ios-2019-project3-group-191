@@ -11,8 +11,11 @@ import CryptoCurrencyKit
 
 //Prices in numeric(not text format)
 var bcPriceNum: Double = 0
+var bcHoldingsNum: Double = 0
 var etherPriceNum: Double = 0
+var etherHoldingsNum: Double = 0
 var lcPriceNum: Double = 0
+var litecoinHoldingsNum: Double = 0
 
 class ViewController: UIViewController {
 
@@ -33,6 +36,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var litecoinHoldings: UILabel!
     @IBOutlet weak var litecoinValue: UILabel!
     
+    @IBOutlet weak var portfolioValue: UILabel!
+    
     @IBAction func addButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toTransaction", sender: self)
     }
@@ -40,6 +45,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         portfolioView.layer.cornerRadius = 5
         updateCurrencies()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.updatePortolio()
+        })
     }
     
     func updateCurrencies() {
@@ -49,8 +57,9 @@ class ViewController: UIViewController {
             case .success(let bitCoin):
                 bcPriceNum = bitCoin.priceUSD!
                 self.bitCoinPrice.text = String(format: "$%.02f", bcPriceNum)
-                let bcHoldingsTemp: Double = bcPriceNum * (Double(self.bitCoinHoldings.text!)!)
-                self.bitCoinValue.text = String(format: "$%.02f", bcHoldingsTemp)
+                bcHoldingsNum = bcPriceNum * (Double(self.bitCoinHoldings.text!)!)
+                print(bcHoldingsNum)
+                self.bitCoinValue.text = String(format: "$%.02f", bcHoldingsNum)
             case .failure(let error):
                 print(error)
             }
@@ -61,8 +70,8 @@ class ViewController: UIViewController {
             case .success(let ether):
                 etherPriceNum = ether.priceUSD!
                 self.etherPrice.text = String(format: "$%.02f", etherPriceNum)
-                let etherHoldingsTemp: Double = bcPriceNum * (Double(self.etherHoldings.text!)!)
-                self.bitCoinValue.text = String(format: "$%.02f", etherHoldingsTemp)
+                etherHoldingsNum = etherPriceNum * (Double(self.etherHoldings.text!)!)
+                self.bitCoinValue.text = String(format: "$%.02f", etherHoldingsNum)
             case .failure(let error):
                 print(error)
             }
@@ -73,12 +82,18 @@ class ViewController: UIViewController {
             case .success(let litecoin):
                 lcPriceNum = litecoin.priceUSD!
                 self.litecoinPrice.text = String(format: "$%.02f", lcPriceNum)
-                let litecoinHoldingsTemp: Double = bcPriceNum * (Double(self.litecoinHoldings.text!)!)
-                self.litecoinValue.text = String(format: "$%.02f", litecoinHoldingsTemp)
+                litecoinHoldingsNum = lcPriceNum * (Double(self.litecoinHoldings.text!)!)
+                self.litecoinValue.text = String(format: "$%.02f", litecoinHoldingsNum)
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    func updatePortolio() {
+        //update Portfolio
+        let portfolioTemp = bcHoldingsNum + etherHoldingsNum + litecoinHoldingsNum
+        print(portfolioTemp)
+        self.portfolioValue.text = String(format: "$%.02f", portfolioTemp)
     }
 
 

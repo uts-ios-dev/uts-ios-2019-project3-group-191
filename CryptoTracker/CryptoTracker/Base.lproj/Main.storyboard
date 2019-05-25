@@ -428,6 +428,7 @@
                         <outlet property="litecoinHoldings" destination="bNy-t9-wI7" id="V19-hz-Dyq"/>
                         <outlet property="litecoinPrice" destination="yBf-Bv-Zue" id="fh4-hh-wkA"/>
                         <outlet property="litecoinValue" destination="Pq1-MH-2tl" id="c7z-TS-nCg"/>
+                        <outlet property="portfolioValue" destination="Shg-BP-nld" id="ZFN-GS-AEW"/>
                         <outlet property="portfolioView" destination="NFB-nA-8a7" id="9xl-Sz-vWu"/>
                         <segue destination="EFv-5u-r7K" kind="show" identifier="toTransaction" id="3gN-fi-0Eo"/>
                     </connections>
