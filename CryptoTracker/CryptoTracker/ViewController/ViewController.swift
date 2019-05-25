@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         let currenciesOld = currencies
         setupView()
         updateCurrencies()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
             self.updatePortolio()
             self.updateGainsLosses(currenciesOld)
         })
@@ -102,7 +102,6 @@ class ViewController: UIViewController {
             switch r {
             case .success(let bitCoin):
                 currencies.updateValue(bitCoin.priceUSD!, forKey:"bitcoin")
-                print("update: \(bitCoin.priceUSD!)")
                 self.bitCoinPrice.text = String(format: "$%.02f", currencies["bitcoin"]!)
                 self.bitCoinValue.text = String(format: "$%.02f", (holdings["bitcoin"]! * currencies["bitcoin"]!))
             case .failure(let error):
@@ -146,8 +145,6 @@ class ViewController: UIViewController {
     func updateGainsLosses(_ currOld: [String:Double]) {
         //caculating Gains/losses compared to last update
         let bitcoinGaintemp = currOld["bitcoin"]! - currencies["bitcoin"]!
-        print(currencies["bitcoin"]!)
-        print(currOld["bitcoin"]!)
         self.bitCoinGainLoss.text = String(format: "%.02f", (bitcoinGaintemp / currOld["bitcoin"]!) * 100.0) + "%"
         if bitcoinGaintemp >= 0 {
             self.bitCoinGainLoss.textColor = UIColor.green
