@@ -1,0 +1,6 @@
+module CryptoCurrencyKit {
+  umbrella header "CryptoCurrencyKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

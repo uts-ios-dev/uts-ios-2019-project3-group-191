@@ -1,0 +1,798 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DF1ADF7172A0998170CD4F6CD184C97 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4962B22CE186EE98B21A2AD8BD95880 /* Request.swift */; };
+		21FBEF73961DDF7323CEE4D9A8EBC85A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457F5911B3A11EA1A0451F6C586CBEFC /* Request.swift */; };
+		238CE28284A2B63D03F5FA5D1DEB4D1E /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8E88E72BF8F5D0B4CF7F32724D709 /* AFError.swift */; };
+		2B336A3A4FBE24457C6F7E8C0DD3C5DC /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECD744E69B97B6521A6E85BD412D28 /* Graph.swift */; };
+		32F3E65D7BFC38E412401567C2B5D442 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBCCD2095CFB070024E93B286F1C07 /* Notifications.swift */; };
+		3720ECE176061AD452DB983FEBBABB0F /* Pods-CryptoTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD4CD8F121635B36FC681076F09FB16 /* Pods-CryptoTracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3E4F601D69940812BBBFA5971A183F8C /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71788AFAB166613C9DA93BF2D7006D23 /* NetworkReachabilityManager.swift */; };
+		40E6DD4E698D8C41007C6DD92F95873C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2635B8CC51E0E2B7308FAB4FBD38D9D /* ServerTrustPolicy.swift */; };
+		44E5669195C1AB51DA4B42D132345086 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17637DB3BC543537FC01CBECFDB5FAE2 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4FDD9019158CE38AE6D2135137D6BBCA /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602072527FFAE06B821914944CEE9C80 /* Global.swift */; };
+		597BA920B3ACB22B734C813DF132B71D /* CryptoCurrencyKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 611755C26FE77539000BB008309C47E6 /* CryptoCurrencyKit-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5F3B155020F8A7F96E9D0C2BBC0E0166 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BE55680F96516C26107DB83FF0404 /* Ticker.swift */; };
+		625BA5E9484B54FC5DB63B21619759E6 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24376E07F390FFEB01C273D330970EE /* Timeline.swift */; };
+		687D4759F9EB04BC3004D7750153E16B /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE09ED34A820DDA221D7024EACD3D90 /* Alamofire.swift */; };
+		6CA2537092B574C9969DD4893B6F481F /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D33282A5852B09018D91DF04C64E74 /* DispatchQueue+Alamofire.swift */; };
+		9590C3F31F5B2900D44477E57F59E67A /* Pods-CryptoTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A4CB07B1F8E6026583E11C9319C70E /* Pods-CryptoTracker-dummy.m */; };
+		9B1BC1E69249B11DF26D1E5EF599F559 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E179D9EE2504324680AAF769A0C5C7F2 /* SessionDelegate.swift */; };
+		9EE02B73CB1F2F39B036270FF6BAD362 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB3F8293159EB66811C16DA7D5A5651 /* Result.swift */; };
+		A8D6B0E95C16E5866F3806649BE47148 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23B5DE5A4B97617BD644B59F44F30FF /* Validation.swift */; };
+		BFB495060FA112A2E86C79AEA3A7539A /* CryptoCurrencyKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC354B3B59B944D1780B42F051EAFA0 /* CryptoCurrencyKit-dummy.m */; };
+		CA72226EDB96CB5ABD6B824613ED9929 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E6B8ED950C77F5C12296F8747B73F /* SessionManager.swift */; };
+		DB9CC3A35273B2AAD0C8461B696D1A1A /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7A57AEC45F7CBFB4281552A82B4ED9 /* MultipartFormData.swift */; };
+		E00205F596AD28E81B9B601DFA37024C /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA893C776150A720832F84DE266558 /* ResponseSerialization.swift */; };
+		E07AB61FD37873AFDD713F3BA54D38D6 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AB7757719D4287FCD1F2464766520 /* TaskDelegate.swift */; };
+		E775FC944DD961BA53CA3681289D4750 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CC585B170E74243F7E236BC7330B0F /* ParameterEncoding.swift */; };
+		E8C2FAA691EEE9A57581AFA5948E6524 /* CryptoCurrencyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9C8C58A71BDB87962CC07CB795BC3E /* CryptoCurrencyKit.swift */; };
+		F78515983449BFBA8BDFBCB45CBC8062 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA6CAE4400A80C46462416DBF46E26 /* Response.swift */; };
+		FF9F6790D2A667AAB07057FB739D03A8 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3143D793B6469250478A0D30E4969027 /* Alamofire-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41C54ABF1176EE423A5003C332DB5388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6384B96666C58F692508F0FB40131979;
+			remoteInfo = CryptoCurrencyKit;
+		};
+		EC3BF9C0604CD9666B62F54C4D5A226D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04CA6CAE4400A80C46462416DBF46E26 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		0BC354B3B59B944D1780B42F051EAFA0 /* CryptoCurrencyKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CryptoCurrencyKit-dummy.m"; sourceTree = "<group>"; };
+		0CB61DE568BE5B2A932B06053ACD6F82 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		0D9C8C58A71BDB87962CC07CB795BC3E /* CryptoCurrencyKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoCurrencyKit.swift; path = Sources/CryptoCurrencyKit.swift; sourceTree = "<group>"; };
+		17637DB3BC543537FC01CBECFDB5FAE2 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		28A4CB07B1F8E6026583E11C9319C70E /* Pods-CryptoTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptoTracker-dummy.m"; sourceTree = "<group>"; };
+		2F888B6F97B795F17D4B72B2AE2243FA /* Pods-CryptoTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptoTracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		3143D793B6469250478A0D30E4969027 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		31CC585B170E74243F7E236BC7330B0F /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		457F5911B3A11EA1A0451F6C586CBEFC /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Sources/Request.swift; sourceTree = "<group>"; };
+		5BECD744E69B97B6521A6E85BD412D28 /* Graph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Graph.swift; path = Sources/Graph.swift; sourceTree = "<group>"; };
+		602072527FFAE06B821914944CEE9C80 /* Global.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Sources/Global.swift; sourceTree = "<group>"; };
+		602AB7757719D4287FCD1F2464766520 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		611755C26FE77539000BB008309C47E6 /* CryptoCurrencyKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoCurrencyKit-umbrella.h"; sourceTree = "<group>"; };
+		71788AFAB166613C9DA93BF2D7006D23 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		7885E76BEC19DD87E8558A0B2FC07B2C /* Pods-CryptoTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		803BE55680F96516C26107DB83FF0404 /* Ticker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ticker.swift; path = Sources/Ticker.swift; sourceTree = "<group>"; };
+		86BBCCD2095CFB070024E93B286F1C07 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		907A923D5EA8E3E238BCA9F3D03D2C1A /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAlamofire.a; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D141F99FD08265DF727324905604B6 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		9ACA893C776150A720832F84DE266558 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F80F71F4FDAF345BC91735168CCC6F1 /* Pods-CryptoTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CryptoTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A23B5DE5A4B97617BD644B59F44F30FF /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		A8D33282A5852B09018D91DF04C64E74 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		AA8275CE25B841581FE323043627BB1A /* CryptoCurrencyKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CryptoCurrencyKit.modulemap; sourceTree = "<group>"; };
+		B24376E07F390FFEB01C273D330970EE /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		B40823911ED67D35BAC5A031029B282F /* Pods-CryptoTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoTracker.release.xcconfig"; sourceTree = "<group>"; };
+		BBF74B173F925BCE79CC333A09BFC927 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		BE7A57AEC45F7CBFB4281552A82B4ED9 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		C4962B22CE186EE98B21A2AD8BD95880 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		D2635B8CC51E0E2B7308FAB4FBD38D9D /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		D4DCC3B28458F32AE7C32166F1E77E38 /* Pods-CryptoTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CryptoTracker.modulemap"; sourceTree = "<group>"; };
+		D67E6B8ED950C77F5C12296F8747B73F /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		DDB3F8293159EB66811C16DA7D5A5651 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		E179D9EE2504324680AAF769A0C5C7F2 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		E448060761510B3FA9D85E55985E5527 /* CryptoCurrencyKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoCurrencyKit-prefix.pch"; sourceTree = "<group>"; };
+		E944405ECD8484A9E5CC4F5FD4D7DE2F /* libPods-CryptoTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CryptoTracker.a"; path = "libPods-CryptoTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B18B7ABAD382E5AFA4E472D6A28F95 /* CryptoCurrencyKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CryptoCurrencyKit.xcconfig; sourceTree = "<group>"; };
+		EFD4CD8F121635B36FC681076F09FB16 /* Pods-CryptoTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CryptoTracker-umbrella.h"; sourceTree = "<group>"; };
+		FA148CA18FFFD781D939121E5089C823 /* libCryptoCurrencyKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCryptoCurrencyKit.a; path = libCryptoCurrencyKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDE09ED34A820DDA221D7024EACD3D90 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		FEB8E88E72BF8F5D0B4CF7F32724D709 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		623625BB4A9C961ADD39B208894D0CBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B95E87A2681FB8D38FE6CAE1DA0009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7D4639529520F27BCEDCCC7342B5B76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31866B48EB9F10640639BD492BD2BBDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				907A923D5EA8E3E238BCA9F3D03D2C1A /* libAlamofire.a */,
+				FA148CA18FFFD781D939121E5089C823 /* libCryptoCurrencyKit.a */,
+				E944405ECD8484A9E5CC4F5FD4D7DE2F /* libPods-CryptoTracker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BE3541312242380FDA3B22D84698491 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				FEB8E88E72BF8F5D0B4CF7F32724D709 /* AFError.swift */,
+				FDE09ED34A820DDA221D7024EACD3D90 /* Alamofire.swift */,
+				A8D33282A5852B09018D91DF04C64E74 /* DispatchQueue+Alamofire.swift */,
+				BE7A57AEC45F7CBFB4281552A82B4ED9 /* MultipartFormData.swift */,
+				71788AFAB166613C9DA93BF2D7006D23 /* NetworkReachabilityManager.swift */,
+				86BBCCD2095CFB070024E93B286F1C07 /* Notifications.swift */,
+				31CC585B170E74243F7E236BC7330B0F /* ParameterEncoding.swift */,
+				C4962B22CE186EE98B21A2AD8BD95880 /* Request.swift */,
+				04CA6CAE4400A80C46462416DBF46E26 /* Response.swift */,
+				9ACA893C776150A720832F84DE266558 /* ResponseSerialization.swift */,
+				DDB3F8293159EB66811C16DA7D5A5651 /* Result.swift */,
+				D2635B8CC51E0E2B7308FAB4FBD38D9D /* ServerTrustPolicy.swift */,
+				E179D9EE2504324680AAF769A0C5C7F2 /* SessionDelegate.swift */,
+				D67E6B8ED950C77F5C12296F8747B73F /* SessionManager.swift */,
+				602AB7757719D4287FCD1F2464766520 /* TaskDelegate.swift */,
+				B24376E07F390FFEB01C273D330970EE /* Timeline.swift */,
+				A23B5DE5A4B97617BD644B59F44F30FF /* Validation.swift */,
+				77E9CF781A655AA7FAE414B0DB0AA5EE /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		45548701AC60A35DF0AD38044E4F54BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BE3541312242380FDA3B22D84698491 /* Alamofire */,
+				7793C301D8BB0038A8226B46CBACEC98 /* CryptoCurrencyKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7793C301D8BB0038A8226B46CBACEC98 /* CryptoCurrencyKit */ = {
+			isa = PBXGroup;
+			children = (
+				0D9C8C58A71BDB87962CC07CB795BC3E /* CryptoCurrencyKit.swift */,
+				602072527FFAE06B821914944CEE9C80 /* Global.swift */,
+				5BECD744E69B97B6521A6E85BD412D28 /* Graph.swift */,
+				457F5911B3A11EA1A0451F6C586CBEFC /* Request.swift */,
+				803BE55680F96516C26107DB83FF0404 /* Ticker.swift */,
+				B545D1A4A71B9B95CBFCFCE1FA845C80 /* Support Files */,
+			);
+			name = CryptoCurrencyKit;
+			path = CryptoCurrencyKit;
+			sourceTree = "<group>";
+		};
+		77E9CF781A655AA7FAE414B0DB0AA5EE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CB61DE568BE5B2A932B06053ACD6F82 /* Alamofire.modulemap */,
+				92D141F99FD08265DF727324905604B6 /* Alamofire.xcconfig */,
+				3143D793B6469250478A0D30E4969027 /* Alamofire-dummy.m */,
+				BBF74B173F925BCE79CC333A09BFC927 /* Alamofire-prefix.pch */,
+				17637DB3BC543537FC01CBECFDB5FAE2 /* Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		9C56990D30122E9986BEC38556440D8E /* Pods-CryptoTracker */ = {
+			isa = PBXGroup;
+			children = (
+				D4DCC3B28458F32AE7C32166F1E77E38 /* Pods-CryptoTracker.modulemap */,
+				9F80F71F4FDAF345BC91735168CCC6F1 /* Pods-CryptoTracker-acknowledgements.markdown */,
+				2F888B6F97B795F17D4B72B2AE2243FA /* Pods-CryptoTracker-acknowledgements.plist */,
+				28A4CB07B1F8E6026583E11C9319C70E /* Pods-CryptoTracker-dummy.m */,
+				EFD4CD8F121635B36FC681076F09FB16 /* Pods-CryptoTracker-umbrella.h */,
+				7885E76BEC19DD87E8558A0B2FC07B2C /* Pods-CryptoTracker.debug.xcconfig */,
+				B40823911ED67D35BAC5A031029B282F /* Pods-CryptoTracker.release.xcconfig */,
+			);
+			name = "Pods-CryptoTracker";
+			path = "Target Support Files/Pods-CryptoTracker";
+			sourceTree = "<group>";
+		};
+		B545D1A4A71B9B95CBFCFCE1FA845C80 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA8275CE25B841581FE323043627BB1A /* CryptoCurrencyKit.modulemap */,
+				E9B18B7ABAD382E5AFA4E472D6A28F95 /* CryptoCurrencyKit.xcconfig */,
+				0BC354B3B59B944D1780B42F051EAFA0 /* CryptoCurrencyKit-dummy.m */,
+				E448060761510B3FA9D85E55985E5527 /* CryptoCurrencyKit-prefix.pch */,
+				611755C26FE77539000BB008309C47E6 /* CryptoCurrencyKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CryptoCurrencyKit";
+			sourceTree = "<group>";
+		};
+		BC4A06F354CD88FA112683B6D8756159 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C56990D30122E9986BEC38556440D8E /* Pods-CryptoTracker */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				45548701AC60A35DF0AD38044E4F54BE /* Pods */,
+				31866B48EB9F10640639BD492BD2BBDA /* Products */,
+				BC4A06F354CD88FA112683B6D8756159 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6EE897F63E9832B7859DF700D1DACABB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44E5669195C1AB51DA4B42D132345086 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DE0E2E611C472CFA6A8650638356020 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				597BA920B3ACB22B734C813DF132B71D /* CryptoCurrencyKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B06F2A6D699929160071694088072FEF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3720ECE176061AD452DB983FEBBABB0F /* Pods-CryptoTracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4A2DC411376E9EEF33DCD253F6E5BA61 /* Pods-CryptoTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6288DE57D05ED77124429652F1499C95 /* Build configuration list for PBXNativeTarget "Pods-CryptoTracker" */;
+			buildPhases = (
+				B06F2A6D699929160071694088072FEF /* Headers */,
+				F038977AE8473CAA9ABE129A21DAF350 /* Sources */,
+				A7D4639529520F27BCEDCCC7342B5B76 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B79A8F633242663279E9AC08F1B4934 /* PBXTargetDependency */,
+				9AA16DCEB7528E6F96928F992896042E /* PBXTargetDependency */,
+			);
+			name = "Pods-CryptoTracker";
+			productName = "Pods-CryptoTracker";
+			productReference = E944405ECD8484A9E5CC4F5FD4D7DE2F /* libPods-CryptoTracker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6384B96666C58F692508F0FB40131979 /* CryptoCurrencyKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A15A537917F4E0F635C5AC4413A97D52 /* Build configuration list for PBXNativeTarget "CryptoCurrencyKit" */;
+			buildPhases = (
+				8DE0E2E611C472CFA6A8650638356020 /* Headers */,
+				9B95DCC4D0AC03EEFF787374A869FAC1 /* Sources */,
+				623625BB4A9C961ADD39B208894D0CBC /* Frameworks */,
+				1BC46733ACD72EEF89FF71513B59F49A /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoCurrencyKit;
+			productName = CryptoCurrencyKit;
+			productReference = FA148CA18FFFD781D939121E5089C823 /* libCryptoCurrencyKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83E9477F5C93C367B958FCF3053EE2D5 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				6EE897F63E9832B7859DF700D1DACABB /* Headers */,
+				FB7ED7801BA41CF7E7547BB53778612A /* Sources */,
+				92B95E87A2681FB8D38FE6CAE1DA0009 /* Frameworks */,
+				28C943094FC8F19FBDEDA75692A73C5D /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 907A923D5EA8E3E238BCA9F3D03D2C1A /* libAlamofire.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 31866B48EB9F10640639BD492BD2BBDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
+				6384B96666C58F692508F0FB40131979 /* CryptoCurrencyKit */,
+				4A2DC411376E9EEF33DCD253F6E5BA61 /* Pods-CryptoTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BC46733ACD72EEF89FF71513B59F49A /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/CryptoCurrencyKit/CryptoCurrencyKit.modulemap",
+				"${PODS_ROOT}/Headers/Public/CryptoCurrencyKit/CryptoCurrencyKit-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/CryptoCurrencyKit-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CryptoCurrencyKit/CryptoCurrencyKit.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CryptoCurrencyKit/CryptoCurrencyKit-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+		28C943094FC8F19FBDEDA75692A73C5D /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire.modulemap",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B95DCC4D0AC03EEFF787374A869FAC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFB495060FA112A2E86C79AEA3A7539A /* CryptoCurrencyKit-dummy.m in Sources */,
+				E8C2FAA691EEE9A57581AFA5948E6524 /* CryptoCurrencyKit.swift in Sources */,
+				4FDD9019158CE38AE6D2135137D6BBCA /* Global.swift in Sources */,
+				2B336A3A4FBE24457C6F7E8C0DD3C5DC /* Graph.swift in Sources */,
+				21FBEF73961DDF7323CEE4D9A8EBC85A /* Request.swift in Sources */,
+				5F3B155020F8A7F96E9D0C2BBC0E0166 /* Ticker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F038977AE8473CAA9ABE129A21DAF350 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9590C3F31F5B2900D44477E57F59E67A /* Pods-CryptoTracker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB7ED7801BA41CF7E7547BB53778612A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238CE28284A2B63D03F5FA5D1DEB4D1E /* AFError.swift in Sources */,
+				FF9F6790D2A667AAB07057FB739D03A8 /* Alamofire-dummy.m in Sources */,
+				687D4759F9EB04BC3004D7750153E16B /* Alamofire.swift in Sources */,
+				6CA2537092B574C9969DD4893B6F481F /* DispatchQueue+Alamofire.swift in Sources */,
+				DB9CC3A35273B2AAD0C8461B696D1A1A /* MultipartFormData.swift in Sources */,
+				3E4F601D69940812BBBFA5971A183F8C /* NetworkReachabilityManager.swift in Sources */,
+				32F3E65D7BFC38E412401567C2B5D442 /* Notifications.swift in Sources */,
+				E775FC944DD961BA53CA3681289D4750 /* ParameterEncoding.swift in Sources */,
+				0DF1ADF7172A0998170CD4F6CD184C97 /* Request.swift in Sources */,
+				F78515983449BFBA8BDFBCB45CBC8062 /* Response.swift in Sources */,
+				E00205F596AD28E81B9B601DFA37024C /* ResponseSerialization.swift in Sources */,
+				9EE02B73CB1F2F39B036270FF6BAD362 /* Result.swift in Sources */,
+				40E6DD4E698D8C41007C6DD92F95873C /* ServerTrustPolicy.swift in Sources */,
+				9B1BC1E69249B11DF26D1E5EF599F559 /* SessionDelegate.swift in Sources */,
+				CA72226EDB96CB5ABD6B824613ED9929 /* SessionManager.swift in Sources */,
+				E07AB61FD37873AFDD713F3BA54D38D6 /* TaskDelegate.swift in Sources */,
+				625BA5E9484B54FC5DB63B21619759E6 /* Timeline.swift in Sources */,
+				A8D6B0E95C16E5866F3806649BE47148 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B79A8F633242663279E9AC08F1B4934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = EC3BF9C0604CD9666B62F54C4D5A226D /* PBXContainerItemProxy */;
+		};
+		9AA16DCEB7528E6F96928F992896042E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoCurrencyKit;
+			target = 6384B96666C58F692508F0FB40131979 /* CryptoCurrencyKit */;
+			targetProxy = 41C54ABF1176EE423A5003C332DB5388 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		033B62CB90E47951353B2EEC8EBCF241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7885E76BEC19DD87E8558A0B2FC07B2C /* Pods-CryptoTracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CryptoTracker/Pods-CryptoTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11BD6E19089DC6199C5D4C50A7FFD894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9B18B7ABAD382E5AFA4E472D6A28F95 /* CryptoCurrencyKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoCurrencyKit/CryptoCurrencyKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/CryptoCurrencyKit/CryptoCurrencyKit.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CryptoCurrencyKit;
+				PRODUCT_NAME = CryptoCurrencyKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DFC592441B3833DF68FC69982A4621B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92D141F99FD08265DF727324905604B6 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32C2FB3BD9A2402E2347CE50F405010A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		45CDF3D978CF2648649048B08F0F19B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92D141F99FD08265DF727324905604B6 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65E8432CA1AC1817F746BE6B5C4F067E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		947D8D653A716266DB4411F4386518BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B40823911ED67D35BAC5A031029B282F /* Pods-CryptoTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CryptoTracker/Pods-CryptoTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA9F23ADC79235BA43B486382B3FB87F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9B18B7ABAD382E5AFA4E472D6A28F95 /* CryptoCurrencyKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoCurrencyKit/CryptoCurrencyKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/CryptoCurrencyKit/CryptoCurrencyKit.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CryptoCurrencyKit;
+				PRODUCT_NAME = CryptoCurrencyKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E8432CA1AC1817F746BE6B5C4F067E /* Debug */,
+				32C2FB3BD9A2402E2347CE50F405010A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6288DE57D05ED77124429652F1499C95 /* Build configuration list for PBXNativeTarget "Pods-CryptoTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033B62CB90E47951353B2EEC8EBCF241 /* Debug */,
+				947D8D653A716266DB4411F4386518BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83E9477F5C93C367B958FCF3053EE2D5 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DFC592441B3833DF68FC69982A4621B /* Debug */,
+				45CDF3D978CF2648649048B08F0F19B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A15A537917F4E0F635C5AC4413A97D52 /* Build configuration list for PBXNativeTarget "CryptoCurrencyKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11BD6E19089DC6199C5D4C50A7FFD894 /* Debug */,
+				CA9F23ADC79235BA43B486382B3FB87F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
