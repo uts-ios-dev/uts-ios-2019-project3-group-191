@@ -43,7 +43,7 @@ public struct CryptoCurrencyKit {
             case .success(let data):
                 do {
                     if let decoded = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: [[Double]]], let values = decoded[graph.rawValue] {
-                        let lines = values.flatMap { ele -> GraphLine? in
+                        let lines = values.compactMap { ele -> GraphLine? in
                             if ele.count == 2 {
                                 return GraphLine(value: ele[1], timestamp: ele[0])
                             } else {
