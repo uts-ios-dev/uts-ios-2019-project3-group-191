@@ -12,13 +12,43 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     @IBOutlet weak var coinPicker: UIPickerView!
     @IBOutlet weak var saveButtonOutlet: UIButton!
+    @IBOutlet weak var bar: UISegmentedControl!
     
     @IBOutlet weak var amountText: UITextField!
     @IBOutlet weak var quantityText: UITextField!
     @IBOutlet weak var transactionFeeText: UITextField!
     
+    var q = 0.0
+    var c = ""
+    
+    //String(format: "$%.02f", currencies[c]!)
+    @IBAction func amountAction(_ sender: UITextField) {
+        let coin: String = currString[coinPicker.selectedRow(inComponent: 0)]
+        let value: Double = currencies[coin]!
+        let newQ: Double = Double(self.amountText.text!)! / value
+        q = newQ
+        c = coin
+        print(String(newQ))
+        quantityText.text = String(format: "%.02f", String(newQ))
+    }
+    
+    @IBAction func quantityAction(_ sender: UITextField) {
+        q = Double(quantityText.text!)!
+        let coin: String = currString[coinPicker.selectedRow(inComponent: 0)]
+        let value: Double = currencies[coin]!
+        let newV: Double = Double(self.quantityText.text!)! * value
+        c = coin
+        print(newV)
+        amountText.text = String(format: "%.02f", String(newV))
+    }
     
     @IBAction func saveButton(_ sender: UIButton) {
+        if bar.selectedSegmentIndex == 0 {
+            holdings[c]! += q
+        }
+        else {
+            holdings[c]! -= q
+        }
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
@@ -35,6 +65,7 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     override func viewDidLoad() {
+        amountText.text = "123"
         super.viewDidLoad()
         setupView()
     }

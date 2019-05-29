@@ -633,7 +633,7 @@
                                                                 </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="7CY-L7-lda">
-                                                                <rect key="frame" x="37.666666666666657" y="-34" width="49.999999999999993" height="128"/>
+                                                                <rect key="frame" x="37.666666666666664" y="-34" width="49.999999999999993" height="128"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="6Tr-VH-WJL"/>
                                                                 </constraints>
@@ -800,6 +800,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="amountAction:" destination="EFv-5u-r7K" eventType="editingDidEnd" id="kDV-ag-for"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Le-LZ-dYl">
                                         <rect key="frame" x="0.0" y="310" width="335" height="40"/>
@@ -812,6 +815,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="quantityAction:" destination="EFv-5u-r7K" eventType="editingDidEnd" id="A9k-ll-7UT"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction Fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIE-BV-u12">
                                         <rect key="frame" x="0.0" y="400" width="335" height="40"/>
@@ -868,6 +874,7 @@
                     </view>
                     <connections>
                         <outlet property="amountText" destination="ohk-mm-eHI" id="psI-v0-UcN"/>
+                        <outlet property="bar" destination="2hy-3L-0Ro" id="aSo-yb-Cft"/>
                         <outlet property="coinPicker" destination="hfu-Jh-vMj" id="pXt-bO-arx"/>
                         <outlet property="quantityText" destination="khA-3v-u4M" id="5jt-8n-S8h"/>
                         <outlet property="saveButtonOutlet" destination="P9Z-Pu-wqw" id="w1x-XV-SRP"/>

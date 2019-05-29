@@ -83,18 +83,6 @@ class ViewController: UIViewController {
         labels["Litecoin"] = litecoinLabels
         labels["Ripple"] = xrpLabels
         labels["EOS"] = eosLabels
-//        holdings["BitCoin"] = 0.1
-//        holdings["Ethereum"] = 1.0
-//        holdings["Litecoin"] = 0.0
-        
-        defaults.set(holdings, forKey: "holdingsKey")
-        let currenciesOld = currencies
-        setupView()
-        updateCurrencies()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-            self.updatePortolio()
-            self.updateGainsLosses(currenciesOld)
-        })
     }
     
     func setupHoldingDic() {
@@ -159,6 +147,19 @@ class ViewController: UIViewController {
                 self.labels[c]![1].textColor = UIColor.red
             }
         }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        //        holdings["BitCoin"] = 0.1
+        //        holdings["Ethereum"] = 1.0
+        //        holdings["Litecoin"] = 0.0
+        defaults.set(holdings, forKey: "holdingsKey")
+        let currenciesOld = currencies
+        setupView()
+        updateCurrencies()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.updatePortolio()
+            self.updateGainsLosses(currenciesOld)
+        })
     }
 
 
