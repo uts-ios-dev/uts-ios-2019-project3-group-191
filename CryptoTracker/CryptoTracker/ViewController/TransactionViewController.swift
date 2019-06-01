@@ -20,16 +20,22 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     var q = 0.0
     var c = ""
+    var timer: Timer?
+    var change: Bool = false
     
     //String(format: "$%.02f", currencies[c]!)
     @IBAction func amountAction(_ sender: UITextField) {
         let coin: String = currString[coinPicker.selectedRow(inComponent: 0)]
         let value: Double = currencies[coin]!
+        if amountText.text!.prefix(1) == "$" {
+            amountText.text!.removeFirst()
+        }
         let newQ: Double = Double(self.amountText.text!)! / value
         q = newQ
         c = coin
-        print(String(newQ))
-        quantityText.text = String(format: "%.02f", String(newQ))
+        quantityText.text = String(format: "%.02f", newQ)
+        amountText.text = String(format: "$%.02f", Double(self.amountText.text!)!)
+        change = true
     }
     
     @IBAction func quantityAction(_ sender: UITextField) {
@@ -38,8 +44,8 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let value: Double = currencies[coin]!
         let newV: Double = Double(self.quantityText.text!)! * value
         c = coin
-        print(newV)
-        amountText.text = String(format: "%.02f", String(newV))
+        amountText.text = String(format: "$%.02f", newV)
+        change = true
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
@@ -73,10 +79,16 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         setupView()
     }
     
+//    func dismissKeyboard() {
+//        view.endEditing(true)
+//    }
+    
     func setupView() {
-        amountText.keyboardType = UIKeyboardType.numbersAndPunctuation
-        quantityText.keyboardType = UIKeyboardType.numbersAndPunctuation
-        transactionFeeText.keyboardType = UIKeyboardType.numbersAndPunctuation
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        amountText.keyboardType = UIKeyboardType.decimalPad
+        quantityText.keyboardType = UIKeyboardType.decimalPad
+        transactionFeeText.keyboardType = UIKeyboardType.decimalPad
         coinPicker.delegate = self
         coinPicker.dataSource = self
         coinPicker.layer.cornerRadius = 5
