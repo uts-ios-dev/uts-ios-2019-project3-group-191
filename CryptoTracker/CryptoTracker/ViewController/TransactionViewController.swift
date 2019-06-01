@@ -43,6 +43,10 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
+        if q == 0 {
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
+            return
+        }
         if bar.selectedSegmentIndex == 0 {
             holdings[c]! += q
         }
@@ -65,12 +69,14 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     override func viewDidLoad() {
-        amountText.text = "123"
         super.viewDidLoad()
         setupView()
     }
     
     func setupView() {
+        amountText.keyboardType = UIKeyboardType.numbersAndPunctuation
+        quantityText.keyboardType = UIKeyboardType.numbersAndPunctuation
+        transactionFeeText.keyboardType = UIKeyboardType.numbersAndPunctuation
         coinPicker.delegate = self
         coinPicker.dataSource = self
         coinPicker.layer.cornerRadius = 5

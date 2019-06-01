@@ -149,9 +149,6 @@ class ViewController: UIViewController {
         }
     }
     override func viewDidAppear(_ animated: Bool) {
-        //        holdings["BitCoin"] = 0.1
-        //        holdings["Ethereum"] = 1.0
-        //        holdings["Litecoin"] = 0.0
         defaults.set(holdings, forKey: "holdingsKey")
         let currenciesOld = currencies
         setupView()
