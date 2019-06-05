@@ -13,22 +13,32 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var coinPicker: UIPickerView!
     @IBOutlet weak var saveButtonOutlet: UIButton!
     @IBOutlet weak var bar: UISegmentedControl!
-    
     @IBOutlet weak var amountText: UITextField!
     @IBOutlet weak var quantityText: UITextField!
-    @IBOutlet weak var transactionFeeText: UITextField!
     
     var q = 0.0
     var c = ""
     var timer: Timer?
     var change: Bool = false
     
-    //String(format: "$%.02f", currencies[c]!)
     @IBAction func amountAction(_ sender: UITextField) {
         let coin: String = currString[coinPicker.selectedRow(inComponent: 0)]
         let value: Double = currencies[coin]!
         if amountText.text!.prefix(1) == "$" {
             amountText.text!.removeFirst()
+        }
+        do {
+            try checkValidAmount()
+        }
+        catch InputError.NotANumberError(let message) {
+            print(message)
+            amountText.text = ""
+            quantityText.text = ""
+            return
+        }
+        catch {
+            print("Unknown Error!")
+            exit(10)
         }
         let newQ: Double = Double(self.amountText.text!)! / value
         q = newQ
@@ -39,6 +49,19 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @IBAction func quantityAction(_ sender: UITextField) {
+        do {
+            try checkValidQuantity()
+        }
+        catch InputError.NotANumberError(let message) {
+            print(message)
+            amountText.text = ""
+            quantityText.text = ""
+            return
+        }
+        catch {
+            print("Unknown Error!")
+            exit(10)
+        }
         q = Double(quantityText.text!)!
         let coin: String = currString[coinPicker.selectedRow(inComponent: 0)]
         let value: Double = currencies[coin]!
@@ -46,6 +69,18 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         c = coin
         amountText.text = String(format: "$%.02f", newV)
         change = true
+    }
+    
+    func checkValidQuantity() throws {
+        if Double(self.quantityText.text!) == nil {
+            throw InputError.NotANumberError("Error: This is not a valid quantity!")
+        }
+    }
+    
+    func checkValidAmount() throws {
+        if Double(self.amountText.text!) == nil {
+            throw InputError.NotANumberError("Error: This is not a valid amount!")
+        }
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
@@ -88,7 +123,6 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
 //        view.addGestureRecognizer(tap)
         amountText.keyboardType = UIKeyboardType.decimalPad
         quantityText.keyboardType = UIKeyboardType.decimalPad
-        transactionFeeText.keyboardType = UIKeyboardType.decimalPad
         coinPicker.delegate = self
         coinPicker.dataSource = self
         coinPicker.layer.cornerRadius = 5

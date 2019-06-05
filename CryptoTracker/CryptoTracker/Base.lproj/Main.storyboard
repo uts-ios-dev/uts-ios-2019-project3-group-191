@@ -589,7 +589,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Bitcoin..." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4c6-OY-3ra">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Headline" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4c6-OY-3ra">
                                                             <rect key="frame" x="15" y="41" width="177" height="68"/>
                                                             <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -837,30 +837,16 @@
                                             <action selector="quantityAction:" destination="EFv-5u-r7K" eventType="editingDidEnd" id="A9k-ll-7UT"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction Fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIE-BV-u12">
-                                        <rect key="frame" x="0.0" y="400" width="335" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFI-mf-4MY">
-                                        <rect key="frame" x="0.0" y="440" width="335" height="50"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niX-fZ-Am6">
-                                        <rect key="frame" x="0.0" y="490" width="335" height="234"/>
+                                        <rect key="frame" x="0.0" y="400" width="335" height="324"/>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hfu-Jh-vMj" firstAttribute="height" secondItem="2hy-3L-0Ro" secondAttribute="height" id="1WN-v9-fqC"/>
                                     <constraint firstItem="ohk-mm-eHI" firstAttribute="height" secondItem="hfu-Jh-vMj" secondAttribute="height" id="KTO-hJ-T7a"/>
-                                    <constraint firstItem="ZIE-BV-u12" firstAttribute="height" secondItem="5Le-LZ-dYl" secondAttribute="height" id="cgt-Cp-dtJ"/>
                                     <constraint firstItem="ZCa-Hl-6Wt" firstAttribute="height" secondItem="hfu-Jh-vMj" secondAttribute="height" multiplier="0.8" id="jN4-64-VQf"/>
                                     <constraint firstItem="FO7-m3-XSc" firstAttribute="height" secondItem="2hy-3L-0Ro" secondAttribute="height" id="jrV-Yd-Jxc"/>
                                     <constraint firstItem="N2l-pR-Rmp" firstAttribute="height" secondItem="ZCa-Hl-6Wt" secondAttribute="height" id="vMU-7i-lh2"/>
-                                    <constraint firstItem="yFI-mf-4MY" firstAttribute="height" secondItem="khA-3v-u4M" secondAttribute="height" id="wKO-sH-Xf8"/>
                                     <constraint firstItem="khA-3v-u4M" firstAttribute="height" secondItem="ohk-mm-eHI" secondAttribute="height" id="x5Y-mK-fL8"/>
                                     <constraint firstItem="5Le-LZ-dYl" firstAttribute="height" secondItem="N2l-pR-Rmp" secondAttribute="height" id="zNz-bn-BuG"/>
                                 </constraints>
@@ -896,7 +882,6 @@
                         <outlet property="coinPicker" destination="hfu-Jh-vMj" id="pXt-bO-arx"/>
                         <outlet property="quantityText" destination="khA-3v-u4M" id="5jt-8n-S8h"/>
                         <outlet property="saveButtonOutlet" destination="P9Z-Pu-wqw" id="w1x-XV-SRP"/>
-                        <outlet property="transactionFeeText" destination="yFI-mf-4MY" id="aSO-Hz-8pq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9P-7X-pMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
