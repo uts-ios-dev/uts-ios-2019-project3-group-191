@@ -1,20 +1,30 @@
 PODS:
   - Alamofire (4.8.2)
   - CryptoCurrencyKit (0.3.1)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.6)
   - CryptoCurrencyKit
+  - SDWebImage
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - CryptoCurrencyKit
+    - SDWebImage
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   CryptoCurrencyKit: 5c78da2dfb845e2feddb519b56169ab39f117ca1
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: b4aecbb0f169fd8b0f54eb896084390de637705d
+PODFILE CHECKSUM: 443891c171127d059566e375b36aed0c48bb6a3b
 
 COCOAPODS: 1.7.0

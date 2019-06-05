@@ -568,55 +568,70 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YaL-pm-Xir">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UQE-dV-HWH">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="654"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn6-Ai-bXN">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News about Bitcoins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKs-Qx-udz">
-                                                <rect key="frame" x="0.0" y="54" width="375" height="150"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News about Bitcoins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChA-jY-dnG">
-                                                <rect key="frame" x="0.0" y="204" width="375" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="ybO-60-iCx"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News about Ether" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmO-0m-72U">
-                                                <rect key="frame" x="0.0" y="354" width="375" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="n7X-Q2-bfM"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News about Ether" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-dq-fT2">
-                                                <rect key="frame" x="0.0" y="504" width="375" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="jzh-1N-YBz"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtB-n3-Jem">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                         <constraints>
-                                            <constraint firstItem="qDk-dq-fT2" firstAttribute="height" secondItem="WmO-0m-72U" secondAttribute="height" id="agf-Yz-nCz"/>
-                                            <constraint firstItem="WmO-0m-72U" firstAttribute="height" secondItem="ChA-jY-dnG" secondAttribute="height" id="cPv-5n-87v"/>
-                                            <constraint firstItem="ChA-jY-dnG" firstAttribute="height" secondItem="bKs-Qx-udz" secondAttribute="height" id="iD9-Y0-QQO"/>
+                                            <constraint firstAttribute="height" constant="130" id="2Ab-7L-T9t"/>
                                         </constraints>
-                                    </stackView>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bw0-0f-JnA">
+                                        <rect key="frame" x="0.0" y="130" width="375" height="524"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="120" id="bIw-5C-BO5" customClass="NewsCell" customModule="CryptoTracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bIw-5C-BO5" id="lYr-BK-KiU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Bitcoin..." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4c6-OY-3ra">
+                                                            <rect key="frame" x="15" y="41" width="177" height="68"/>
+                                                            <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSp-x9-DnD">
+                                                            <rect key="frame" x="14.999999999999996" y="11" width="58.666666666666657" height="20"/>
+                                                            <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                                            <color key="textColor" red="0.1723507671" green="0.54395875599999999" blue="0.98655849699999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8YJ-Bg-6RV">
+                                                            <rect key="frame" x="210" y="11" width="150" height="98"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="150" id="bcb-Re-UyP"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="4c6-OY-3ra" firstAttribute="leading" secondItem="lYr-BK-KiU" secondAttribute="leadingMargin" id="3sq-d9-h1P"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="8YJ-Bg-6RV" secondAttribute="bottom" id="5nY-g2-oQy"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hSp-x9-DnD" secondAttribute="trailingMargin" id="6rd-pd-lw2"/>
+                                                        <constraint firstItem="8YJ-Bg-6RV" firstAttribute="top" secondItem="lYr-BK-KiU" secondAttribute="topMargin" id="Nlk-UY-CUQ"/>
+                                                        <constraint firstItem="4c6-OY-3ra" firstAttribute="top" secondItem="hSp-x9-DnD" secondAttribute="bottom" constant="10" id="Z4y-5M-trl"/>
+                                                        <constraint firstItem="8YJ-Bg-6RV" firstAttribute="leading" secondItem="4c6-OY-3ra" secondAttribute="trailing" constant="18" id="ZZf-R2-1xq"/>
+                                                        <constraint firstItem="hSp-x9-DnD" firstAttribute="top" secondItem="lYr-BK-KiU" secondAttribute="topMargin" id="Zpj-jZ-1S9"/>
+                                                        <constraint firstItem="4c6-OY-3ra" firstAttribute="bottom" secondItem="lYr-BK-KiU" secondAttribute="bottomMargin" id="cdS-df-HDz"/>
+                                                        <constraint firstItem="hSp-x9-DnD" firstAttribute="leading" secondItem="lYr-BK-KiU" secondAttribute="leadingMargin" id="tkp-jG-p67"/>
+                                                        <constraint firstItem="8YJ-Bg-6RV" firstAttribute="trailing" secondItem="lYr-BK-KiU" secondAttribute="trailingMargin" id="xZR-pi-oW9"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="newsImage" destination="8YJ-Bg-6RV" id="51W-Ey-cnz"/>
+                                                    <outlet property="newsSource" destination="hSp-x9-DnD" id="fW6-R4-QsI"/>
+                                                    <outlet property="newsTitle" destination="4c6-OY-3ra" id="nAg-tD-IGY"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfP-hS-rxs">
                                         <rect key="frame" x="0.0" y="654" width="375" height="80"/>
                                         <subviews>
@@ -743,6 +758,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fUm-iV-vGE"/>
                     </view>
+                    <connections>
+                        <outlet property="newsTableView" destination="Bw0-0f-JnA" id="Av3-Mh-krj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4m-27-jh0" sceneMemberID="firstResponder"/>
             </objects>
@@ -899,6 +917,6 @@
         <image name="xrp" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3gN-fi-0Eo"/>
+        <segue reference="XSX-iD-8Fy"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,7 @@
 		ACF0E1A260608CE21C2D513B /* libPods-CryptoTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF19E10A05E1BF5632E734B4 /* libPods-CryptoTracker.a */; };
 		B8AB233D22951E6C0067FEF0 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB233C22951E6C0067FEF0 /* TransactionViewController.swift */; };
 		B8AB233F22952F3C0067FEF0 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB233E22952F3C0067FEF0 /* NewsViewController.swift */; };
+		B8C8748A22A7603200C99B7D /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C8748922A7603200C99B7D /* NewsCell.swift */; };
 		B8EE12A8228D389B00E75E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE12A7228D389B00E75E02 /* AppDelegate.swift */; };
 		B8EE12AA228D389B00E75E02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE12A9228D389B00E75E02 /* ViewController.swift */; };
 		B8EE12AD228D389B00E75E02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EE12AB228D389B00E75E02 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		A5BD08F4EEF9C715707401DB /* Pods-CryptoTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoTracker.release.xcconfig"; path = "Target Support Files/Pods-CryptoTracker/Pods-CryptoTracker.release.xcconfig"; sourceTree = "<group>"; };
 		B8AB233C22951E6C0067FEF0 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		B8AB233E22952F3C0067FEF0 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		B8C8748922A7603200C99B7D /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		B8EE12A4228D389B00E75E02 /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EE12A7228D389B00E75E02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8EE12A9228D389B00E75E02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 				C75B8D07C7950640D907E610 /* Pods-CryptoTracker.debug.xcconfig */,
 				A5BD08F4EEF9C715707401DB /* Pods-CryptoTracker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -66,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				B8EE12A9228D389B00E75E02 /* ViewController.swift */,
+				B8C8748922A7603200C99B7D /* NewsCell.swift */,
 				B8AB233C22951E6C0067FEF0 /* TransactionViewController.swift */,
 				B8AB233E22952F3C0067FEF0 /* NewsViewController.swift */,
 			);
@@ -205,6 +207,7 @@
 				B8AB233D22951E6C0067FEF0 /* TransactionViewController.swift in Sources */,
 				B8EE12A8228D389B00E75E02 /* AppDelegate.swift in Sources */,
 				B8AB233F22952F3C0067FEF0 /* NewsViewController.swift in Sources */,
+				B8C8748A22A7603200C99B7D /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,11 +356,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R768H2BL27;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = CryptoTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Alamofire\"",
+					"-l\"CryptoCurrencyKit\"",
+					"-l\"SDWebImage\"",
+					"-l\"SwiftyJSON\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alex.CryptoTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,11 +389,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R768H2BL27;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = CryptoTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Alamofire\"",
+					"-l\"CryptoCurrencyKit\"",
+					"-l\"SDWebImage\"",
+					"-l\"SwiftyJSON\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alex.CryptoTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";

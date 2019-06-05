@@ -84,8 +84,8 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
 //    }
     
     func setupView() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
         amountText.keyboardType = UIKeyboardType.decimalPad
         quantityText.keyboardType = UIKeyboardType.decimalPad
         transactionFeeText.keyboardType = UIKeyboardType.decimalPad

@@ -3,5 +3,7 @@
 
 target 'CryptoTracker' do
 	pod 'CryptoCurrencyKit'
-	pod 'Alamofire'
+	pod 'SwiftyJSON'
+  	pod 'Alamofire', '~> 4.6'
+  	pod 'SDWebImage'
 end
