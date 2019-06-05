@@ -5,13 +5,11 @@
 //  Created by Alexander Schüßling on 22.05.19.
 //  Copyright © 2019 UTS. All rights reserved.
 //
+// The news part of this app is developed based on an existing news app on GitHub, that was further developed and applied for this purpose (https://github.com/johnnyperdomo/News-App)
 
 import UIKit
 import Alamofire
 import SwiftyJSON
-//import SDWebImage
-
-// The news part of this app is developed based on an existing news app on GitHub (https://github.com/johnnyperdomo/News-App)
 
 class NewsViewController: UIViewController {
 
@@ -55,7 +53,6 @@ class NewsViewController: UIViewController {
     }
 }
 
-
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,34 +67,20 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = newsTableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? NewsCell else {
             return UITableViewCell()
         }
-        
         var titles = String()
         var sources = String()
-        
         if titleArray.count > 0 {
             titles = titleArray[indexPath.row ]
         } else {
             titles = ""
         }
-        
         if newsSourceArray.count > 0 {
             sources = newsSourceArray[indexPath.row]
         } else {
             sources = ""
         }
-        
         if imageURLArray.count > 0 {
-            
-//            cell.newsImage.sd_setImage(with: URL(string: imageURLArray[indexPath.row])) { (image, error, cache, urls) in
-//                if (error != nil) {
-//                    cell.newsImage.image = UIImage(named: "newsPlaceholder")
-//                } else {
-//                    cell.newsImage.image = image
-//                }
-//            }
-            
-        } else {
-            cell.newsImage.image = UIImage(named: "newsPlaceholder")!
+            cell.newsImage.image = UIImage(named: imageURLArray[indexPath.row])
         }
         cell.newsImage.layer.cornerRadius = 10
         cell.configureCell(newsTitle: titles, newsSource: sources)
@@ -107,7 +90,8 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let indexPath = tableView.indexPathForSelectedRow
         let urls = newsStoryUrlArray[(indexPath?.row)!]
-        UIApplication.shared.open( URL(string: urls)!, options: [:] ) { (success) in
+        UIApplication.shared.open( URL(string: urls)!, options: [:] ) {
+            (success) in
         }
     }
 }
@@ -127,16 +111,16 @@ extension NewsViewController {
                 }
                 let json = JSON(value)
                 for item in json["articles"].arrayValue {
-                    self.titleArray.append(item["title"].stringValue)
-                    self.newsSourceArray.append(item["source"]["name"].stringValue)
-                    self.imageURLArray.append(item["urlToImage"].stringValue)
-                    self.newsStoryUrlArray.append(item["url"].stringValue)
+                    if !(self.titleArray.contains(item["title"].stringValue)) {
+                        self.titleArray.append(item["title"].stringValue)
+                        self.newsSourceArray.append(item["source"]["name"].stringValue)
+                        self.imageURLArray.append(term)
+                        self.newsStoryUrlArray.append(item["url"].stringValue)
+                    }
                 }
                 complete(true)
             }
         }
     }
-    
-    
 }
 

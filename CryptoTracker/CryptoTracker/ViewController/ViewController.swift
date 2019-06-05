@@ -9,11 +9,6 @@
 import UIKit
 import CryptoCurrencyKit
 
-let defaults = UserDefaults.standard
-var holdings: [String: Double] = [:]
-var currencies: [String: Double] = [:]
-var currString: [String] = ["BitCoin", "Ethereum", "Litecoin", "Ripple","EOS"]
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var portfolioView: UIView!
@@ -51,7 +46,6 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toTransaction", sender: self)
     }
     
-    
     @IBAction func refreshButton(_ sender: UIButton) {
         let currenciesOld = currencies
         updateCurrencies()
@@ -83,6 +77,17 @@ class ViewController: UIViewController {
         labels["Litecoin"] = litecoinLabels
         labels["Ripple"] = xrpLabels
         labels["EOS"] = eosLabels
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        defaults.set(holdings, forKey: "holdingsKey")
+        let currenciesOld = currencies
+        setupView()
+        updateCurrencies()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.updatePortolio()
+            self.updateGainsLosses(currenciesOld)
+        })
     }
     
     func setupHoldingDic() {
@@ -148,17 +153,5 @@ class ViewController: UIViewController {
             }
         }
     }
-    override func viewDidAppear(_ animated: Bool) {
-        defaults.set(holdings, forKey: "holdingsKey")
-        let currenciesOld = currencies
-        setupView()
-        updateCurrencies()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-            self.updatePortolio()
-            self.updateGainsLosses(currenciesOld)
-        })
-    }
-
-
 }
 

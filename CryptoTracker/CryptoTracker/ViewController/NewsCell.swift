@@ -15,7 +15,6 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var newsImage: UIImageView!
     
     func configureCell( newsTitle: String, newsSource: String) {
-        //    self.newsImage.image = newsImage
         self.newsTitle.text = newsTitle
         self.newsSource.text = newsSource
     }

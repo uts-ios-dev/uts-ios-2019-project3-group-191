@@ -92,7 +92,12 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
             holdings[c]! += q
         }
         else {
-            holdings[c]! -= q
+            if q >= holdings[c]! {
+                holdings[c]! = 0
+            }
+            else {
+                holdings[c]! -= q
+            }
         }
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
@@ -113,14 +118,14 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         super.viewDidLoad()
         setupView()
     }
-    
-//    func dismissKeyboard() {
-//        view.endEditing(true)
-//    }
+   
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     func setupView() {
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TransactionViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         amountText.keyboardType = UIKeyboardType.decimalPad
         quantityText.keyboardType = UIKeyboardType.decimalPad
         coinPicker.delegate = self
@@ -128,5 +133,4 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         coinPicker.layer.cornerRadius = 5
         saveButtonOutlet.layer.cornerRadius = 5
     }
-
 }
