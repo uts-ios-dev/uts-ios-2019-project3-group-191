@@ -817,7 +817,7 @@
                                         <rect key="frame" x="0.0" y="260" width="335" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="amountAction:" destination="EFv-5u-r7K" eventType="editingDidEnd" id="kDV-ag-for"/>
                                         </connections>
@@ -902,6 +902,6 @@
         <image name="refresh" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XSX-iD-8Fy"/>
+        <segue reference="3gN-fi-0Eo"/>
     </inferredMetricsTieBreakers>
 </document>

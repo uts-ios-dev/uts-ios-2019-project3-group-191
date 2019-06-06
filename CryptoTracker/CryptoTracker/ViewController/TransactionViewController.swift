@@ -21,6 +21,7 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var timer: Timer?
     var change: Bool = false
     
+    //this code grabs the amount value in the quantity text field, divides it by the price amount of the cryptocurrency the coinpicker currently sits, and updates it into the quantity text field.
     @IBAction func amountAction(_ sender: UITextField) {
         let coin: String = currString[coinPicker.selectedRow(inComponent: 0)]
         let value: Double = currencies[coin]!
@@ -40,14 +41,19 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
             print("Unknown Error!")
             exit(10)
         }
+        //this converts the amount by price of coin into quantity
         let newQ: Double = Double(self.amountText.text!)! / value
+        //q and c are values to be used to modify the holdings in the main view. q is the quantity, and c is the type of cryptocurrency.
         q = newQ
         c = coin
+        
+        //this prints the value on both quantity and amount text field.
         quantityText.text = String(format: "%.02f", newQ)
         amountText.text = String(format: "$%.02f", Double(self.amountText.text!)!)
         change = true
     }
     
+    //this code grabs the quantity value in the quantity text field, multiplies it by the price amount of the cryptocurrency the coinpicker currently sits, and updates it into the amount text field.
     @IBAction func quantityAction(_ sender: UITextField) {
         do {
             try checkValidQuantity()
@@ -71,30 +77,37 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         change = true
     }
     
+    //this checks if the quantity being input is null (nothing)
     func checkValidQuantity() throws {
         if Double(self.quantityText.text!) == nil {
             throw InputError.NotANumberError("Error: This is not a valid quantity!")
         }
     }
-    
+    //this checks if the amount input is null
     func checkValidAmount() throws {
         if Double(self.amountText.text!) == nil {
             throw InputError.NotANumberError("Error: This is not a valid amount!")
         }
     }
     
+    
+    //this code saves the data inputted in the Amount text field into Holdings in the main view controller.
     @IBAction func saveButton(_ sender: UIButton) {
         if q == 0 {
             self.presentingViewController?.dismiss(animated: true, completion: nil)
             return
         }
+        
+        //this commands the inputted amount to be added into holdings
         if bar.selectedSegmentIndex == 0 {
             holdings[c]! += q
         }
         else {
+        //this checks if the holding amounts is less than the amount subtraction. if so, sets holdings to 0 instead.
             if q >= holdings[c]! {
                 holdings[c]! = 0
             }
+        //this commands the inputted amount to subtract the holdings amount
             else {
                 holdings[c]! -= q
             }
@@ -114,6 +127,7 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         return currString[row]
     }
     
+    //loads the transaction view
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
